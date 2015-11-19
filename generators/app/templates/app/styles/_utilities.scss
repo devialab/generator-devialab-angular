@@ -1,0 +1,129 @@
+.text-primary {
+  color: $brand-primary !important;
+  fill: $brand-primary !important;
+}
+
+.text-danger {
+  color: $brand-danger !important;
+  fill: $brand-danger !important;
+}
+
+.text-default {
+  color: $text-color !important;
+  fill: $text-color !important;
+}
+
+.text-inverse {
+  color: white !important;
+  fill: white !important;
+}
+
+.text-transparent {
+  color: black !important;
+  fill: black !important;
+  opacity: 0.5 !important;
+}
+
+.bg-inverse {
+  background-color: white !important;
+}
+
+.pad-top-10 {
+  padding-top: 10px;
+}
+
+.pad-top-20 {
+  padding-top: 20px;
+}
+
+.pad-top-50 {
+  padding-top: 50px;
+}
+
+.pad-bottom-10 {
+  padding-bottom: 10px;
+}
+
+.pad-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.pad-bottom-50 {
+  padding-bottom: 50px;
+}
+
+.mar-top-10 {
+  margin-top: 10px;
+}
+
+.mar-top-20 {
+  margin-top: 20px;
+}
+
+.mar-top-50 {
+  margin-top: 50px;
+}
+
+.mar-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.mar-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.mar-bottom-50 {
+  margin-bottom: 50px;
+}
+
+// Remove the Gutter Padding from Columns
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+// Accessibility and Screen Readers
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.vertical-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none !important;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+

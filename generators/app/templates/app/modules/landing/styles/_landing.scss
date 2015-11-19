@@ -1,0 +1,15 @@
+/**
+ * LANDING
+ */
+
+@import "./_landing-footer.scss";
+@import "./_landing-header.scss";
+@import "./_mailing-form.scss";
+@import "./_newsletter-form.scss";
+.landing-top .jumbotron {
+  background: url(https://placeimg.com/1380/625/tech) center center no-repeat #FFF;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 95px);
+  max-height: 800px;
+}

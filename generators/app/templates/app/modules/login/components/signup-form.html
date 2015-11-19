@@ -1,0 +1,35 @@
+<form id="signup-form" name="signupform" class="col-sm-12">
+
+  <div class="form-group has-feedback has-feedback-left" ng-class="{'has-error': signupform.username.$invalid && signupform.username.$dirty}">
+    <label for="signup-username" class="hidden" translate="form.username"></label>
+    <input type="text" name="username" class="form-control" id="signup-username" ng-model="vm.username" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.username">
+  </div>
+
+  <div class="form-group has-feedback has-feedback-left" ng-class="{'has-error': signupform.password.$invalid && signupform.password.$dirty}">
+    <label for="signup-password" class="hidden" translate="form.password"></label>
+    <input type="password" name="password" class="form-control" id="signup-password" ng-model="vm.password" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.password">
+  </div>
+
+  <div class="form-group has-feedback has-feedback-left" ng-class="{'has-error': signupform.email.$invalid && signupform.email.$dirty}">
+    <label for="signup-email" class="hidden" translate="form.email"></label>
+    <input type="email" name="email" class="form-control" id="signup-email" ng-model="vm.email" ng-change="vm.error = ''" required email translate translate-attr-placeholder="form.email">
+  </div>
+
+  <!-- ERRORS -->
+  <div class="form-group login-message form-message error-message" role="alert" ng-show="vm.error || (signupform.$invalid && loginform.$submitted)">
+    <div ng-show="!signupform.$invalid && vm.error">{{vm.error}}</div>
+    <div ng-show="signupform.username.$error.required && signupform.username.$dirty" translate="form.username.error.required"></div>
+    <div ng-show="signupform.email.$error.required && signupform.email.$dirty" translate="form.email.error.required"></div>
+    <div ng-show="signupform.email.$error.email && signupform.email.$dirty" translate="form.email.error.email"></div>
+    <div ng-show="signupform.password.$error.required && signupform.password.$dirty" translate="form.password.error.required"></div>
+  </div>
+
+  <div class="terms">
+    <p>
+      <span translate="terms.partial"></span>
+      <a href="#/home/terms" class="text-primary" translate="terms"></a>
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block text-uppercase" ng-click="vm.signup(vm.email, vm.username, vm.password)" translate="signup.form.submit"></button>
+
+</form>

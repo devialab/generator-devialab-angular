@@ -1,0 +1,14 @@
+<form id="mailing-form" name="mailingform">
+
+  <div class="input-group" ng-class="{'has-error': mailingform.email.$invalid && mailingform.email.$dirty}">
+
+    <input type="email" name="email" class="form-control inverse" id="mailing-email" ng-model="vm.email" ng-change="vm.error = ''" required email translate translate-attr-placeholder="form.email">
+
+
+    <span class="input-group-btn">
+      <button class="btn btn-primary text-uppercase" type="submit" ng-click="vm.submit(vm.email)" translate="mailing.form.submit"></button>
+    </span>
+
+  </div>
+
+</form>

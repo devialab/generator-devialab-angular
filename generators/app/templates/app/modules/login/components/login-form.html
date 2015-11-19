@@ -1,0 +1,32 @@
+<form id="login-form" name="loginform" class="col-sm-12">
+
+  <div class="form-group has-feedback has-feedback-left" ng-class="{'has-error': loginform.email.$invalid && loginform.email.$dirty}">
+    <label for="login-email" class="hidden" translate="form.email"></label>
+    <input type="email" name="email" class="form-control" id="login-email" ng-model="vm.email" ng-change="vm.error = ''" required email translate translate-attr-placeholder="form.email">
+
+  </div>
+
+  <div class="form-group has-feedback has-feedback-left" ng-class="{'has-error': loginform.password.$invalid && loginform.password.$dirty}">
+    <label for="login-password" class="hidden" translate="form.password"></label>
+    <input type="password" name="password" class="form-control" id="login-password" ng-model="vm.password" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.password">
+
+
+  </div>
+
+  <!-- ERRORS -->
+  <div class="form-group form-message error-message" role="alert" ng-show="vm.error || (loginform.$invalid && loginform.$submitted)">
+    <div ng-show="!loginform.$invalid && vm.error">{{vm.error}}</div>
+    <div ng-show="loginform.email.$error.required && loginform.email.$dirty" translate="form.email.error.required"></div>
+    <div ng-show="loginform.email.$error.email && loginform.email.$dirty" translate="form.email.error.email"></div>
+    <div ng-show="loginform.password.$error.required && loginform.password.$dirty" translate="form.password.error.required"></div>
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="vm.persistent">
+      <span translate="login.form.remember"></span>
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block text-uppercase" ng-click="vm.login(vm.email, vm.password, vm.persistent)" translate="login.form.submit"></button>
+
+</form>

@@ -1,0 +1,83 @@
+<section class="container account-section">
+  <article class="row">
+
+
+    <uib-tabset vertical="true" type="pills">
+      <uib-tab heading="Edit your personal information">
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, maiores voluptates sed at provident magnam amet deleniti ut dignissimos numquam quaerat ab libero ducimus explicabo asperiores tenetur fugiat modi. Rerum!
+        </p>
+
+        <!-- Personal information form -->
+        <form class="col-sm-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="http://placehold.it/150?text=photo" class="img-responsive">
+              </div>
+              <div class="col-sm-8">
+                <label for="exampleInputFile">Photo</label>
+                <input type="file" id="exampleInputFile">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="account-name">Name *</label>
+            <input type="text" class="form-control" id="account-name" placeholder="Sonia" required>
+          </div>
+          <div class="form-group">
+            <label for="account-surname">Surname *</label>
+            <input type="text" class="form-control" id="account-surname" placeholder="Rodríguez" required>
+          </div>
+          <div class="form-group">
+            <label for="account-username">Username *</label>
+            <input type="text" class="form-control" id="account-username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <label for="account-email">Email *</label>
+            <input type="email" class="form-control" id="account-email" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="account-phone">Phone</label>
+            <input type="text" class="form-control" id="account-phone" placeholder="677 77 88 99">
+          </div>
+          <div class="form-group">
+            <label for="account-language">Language *</label>
+            <select id="account-language" class="form-control" required>
+              <option>Español</option>
+              <option>Inglés</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+
+      </uib-tab>
+      <uib-tab heading="Change your password">
+
+       <div class="text-center">
+            Do you want change your password?
+          </div>
+
+          <!-- Personal information form -->
+          <form class="col-sm-4">
+            <div class="form-group">
+              <label for="account-current-password">Current password *</label>
+              <input type="password" class="form-control" id="account-current-password" required>
+            </div>
+            <div class="form-group">
+              <label for="account-new-password">New password *</label>
+              <input type="password" class="form-control" id="account-new-password" required>
+            </div>
+            <div class="form-group">
+              <label for="account-repeat-new-password">Repeat new password *</label>
+              <input type="password" class="form-control" id="account-repeat-new-password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+      </uib-tab>
+    </uib-tabset>
+
+  </article>
+</section>

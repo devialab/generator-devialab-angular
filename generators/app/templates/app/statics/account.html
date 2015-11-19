@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="devialab.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <link rel="manifest" href="images/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Account</title>
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) ../styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
+  <link rel="stylesheet" href="../bower_components/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="../bower_components/nvd3/build/nv.d3.css" />
+  <link rel="stylesheet" href="../bower_components/select2/dist/css/select2.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) ../styles/main.css -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <!-- endbuild -->
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Example</a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio Builder <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User name <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Personal information</a></li>
+                <li><a href="#">Account information</a></li>
+                <li><a href="#">Multiple accounts</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="nav navbar-nav">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Currency Euro
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Dollar</a></li>
+                <li><a href="#">Another currency</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <section class="container">
+    <article class="row">
+      <div class="col-sm-3">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#personal-information" role="tab" data-toggle="tab">Edit your personal information</a>
+          </li>
+          <li role="presentation">
+            <a href="#change-password" role="tab" data-toggle="tab">Change your password</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-sm-9">
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="personal-information">
+            <div class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, maiores voluptates sed at provident magnam amet deleniti ut dignissimos numquam quaerat ab libero ducimus explicabo asperiores tenetur fugiat modi. Rerum!
+            </div>
+
+            <div class="row-centered">
+              <!-- Personal information form -->
+              <form class="col-sm-6 col-centered">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <img src="http://placehold.it/150?text=photo" class="img-responsive">
+                    </div>
+                    <div class="col-sm-8">
+                      <label for="exampleInputFile">Photo</label>
+                      <input type="file" id="exampleInputFile">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="account-name">Name *</label>
+                  <input type="text" class="form-control" id="account-name" placeholder="Sonia" required >
+                </div>
+                <div class="form-group">
+                  <label for="account-surname">Surname *</label>
+                  <input type="text" class="form-control" id="account-surname" placeholder="Rodríguez" required >
+                </div>
+                <div class="form-group">
+                  <label for="account-username">Username *</label>
+                  <input type="text" class="form-control" id="account-username" placeholder="Username" required >
+                </div>
+                <div class="form-group">
+                  <label for="account-email">Email *</label>
+                  <input type="email" class="form-control" id="account-email" placeholder="example@email.com" required >
+                </div>
+                <div class="form-group">
+                  <label for="account-phone">Phone</label>
+                  <input type="text" class="form-control" id="account-phone" placeholder="677 77 88 99">
+                </div>
+                <div class="form-group">
+                  <label for="account-language">Language *</label>
+                  <select id="account-language" class="form-control" required >
+                    <option>Español</option>
+                    <option>Inglés</option>
+                    <option>Alemán</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="account-currency">Base currency *</label>
+                  <select id="account-currency" class="form-control" required >
+                    <option>Euro</option>
+                    <option>Dollar</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Save</button>
+              </form>
+              <!-- END Personal information form -->
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="change-password">
+            <div class="text-center">
+              Do you want change your password?
+            </div>
+
+            <div class="row-centered">
+              <!-- Personal information form -->
+              <form class="col-sm-6 col-centered">
+                <div class="form-group">
+                  <label for="account-current-password">Current password *</label>
+                  <input type="password" class="form-control" id="account-current-password" required >
+                </div>
+                <div class="form-group">
+                  <label for="account-new-password">New password *</label>
+                  <input type="password" class="form-control" id="account-new-password" required >
+                </div>
+                <div class="form-group">
+                  <label for="account-repeat-new-password">Repeat new password *</label>
+                  <input type="password" class="form-control" id="account-repeat-new-password" required >
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
+              <!-- END Personal information form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <section class="container">
+      <div class="row">
+        <div class="col-sm-3 text-center">
+          <p><a href="#">Support</a></p>
+        </div>
+        <div class="col-sm-3 text-center">
+          <p><a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+        <div class="col-sm-3 text-center">
+          <p><a href="tel:+34666555444">+34 666 555 444</a></p>
+        </div>
+        <div class="col-sm-3">
+          <ul class="list-inline">
+            <li>
+              <a href="#"><img src="http://placehold.it/50?text=In" class="img-responsive"></a>
+            </li>
+            <li>
+              <a href="#"><img src="http://placehold.it/50?text=Tw" class="img-responsive"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <!-- build:js(.) ../scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <script src="../vendor/ie10-viewport-bug-workaround.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js({.,.tmp,app}) ../scripts/scripts.js -->
+  <script src="../app.const.js"></script>
+  <script src="../app.defaultLang.js"></script>
+  <!-- include: "type": "js", "files": ["*.js", "modules/**/*.module.js"] -->
+  <!-- include: "type": "js", "files": ["modules/**/*.js", "!modules/**/*.module.js"] -->
+  <!-- endbuild -->
+
+</body>
+
+</html>

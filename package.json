@@ -1,0 +1,32 @@
+{
+  "name": "generator-devialab-angular",
+  "version": "0.0.1",
+  "description": "Yeoman generator for building AngularJS webapps",
+  "main": "index.js",
+  "files": [
+    "generators/app"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devialab/generator-devialab-angular.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "angular",
+    "devialab"
+  ],
+  "author": "@antaipt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devialab/generator-devialab-angular/issues"
+  },
+  "homepage": "https://github.com/devialab/generator-devialab-angular#readme",
+  "dependencies": {
+    "glob": "^5.0.15",
+    "ncp": "^2.0.0",
+    "yeoman-generator": "^0.21.1"
+  }
+}

@@ -1,0 +1,10 @@
+*.DS_Store
+node_modules
+dist
+.tmp
+.coverage
+.sass-cache
+bower_components
+.idea
+*.iml
+*.log

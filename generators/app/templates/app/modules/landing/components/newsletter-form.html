@@ -1,0 +1,20 @@
+<form action="//mailchimp.subscribe/post" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+  <div class="input-group" ng-class="{'has-error': newsletterform.EMAIL.$invalid && newsletterform.EMAIL.$dirty}">
+
+    <input type="email" name="EMAIL" class="form-control inverse" id="newsletter-email" ng-model="vm.email" ng-change="vm.error = ''" required email translate translate-attr-placeholder="form.email">
+
+    <span class="input-group-btn">
+      <button class="btn btn-primary text-uppercase" type="submit" ng-click="vm.submit(vm.email)" translate="newsletter.form.submit"></button>
+    </span>
+
+  </div>
+
+  <!-- ERRORS -->
+  <div class="form-group login-message form-message" role="alert" ng-show="vm.error || (newsletterform.$dirty && newsletterform.$invalid)">
+    <div ng-show="vm.error">{{vm.error}}</div>
+    <div ng-show="newsletterform.EMAIL.$error.required" translate="form.email.error.required"></div>
+    <div ng-show="newsletterform.EMAIL.$error.email" translate="form.email.error.email"></div>
+  </div>
+
+</form>

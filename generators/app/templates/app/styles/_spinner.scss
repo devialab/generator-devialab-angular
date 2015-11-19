@@ -1,0 +1,59 @@
+/**
+ * Ovverride angular-spinner styles
+ */
+
+#loading-bar-spinner {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  transform-style: preserve-3d;
+  pointer-events: initial;
+  .spinner-icon {
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-top-color: white;
+    border-left-color: white;
+    border-radius: 40px;
+    animation: loading-bar-spinner 800ms linear infinite;
+  }
+}
+
+#loading-bar .bar {
+  z-index: 100003;
+  background: white;
+  height: 3px;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
