@@ -29,18 +29,6 @@ Run `grunt` for building and `grunt serve` for preview
 Available generators:
 
 * [devialab-angular](#app) (aka [devialab-angular:app](#app))
-* [devialab-angular:module](#controller)
-* [devialab-angular:controller](#controller)
-* [devialab-angular:directive](#directive)
-* [devialab-angular:filter](#filter)
-* [devialab-angular:route](#route)
-* [devialab-angular:service](#service)
-* [devialab-angular:provider](#service)
-* [devialab-angular:factory](#service)
-* [devialab-angular:value](#service)
-* [devialab-angular:constant](#service)
-* [devialab-angular:decorator](#decorator)
-* [devialab-angular:view](#view)
 
 ### App
 Sets up a new AngularJS app, generating all the boilerplate you need to get started. The app generator also optionally installs Bootstrap and additional AngularJS modules, such as angular-translate, angularitics, ...
