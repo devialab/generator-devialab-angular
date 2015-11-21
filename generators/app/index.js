@@ -137,7 +137,7 @@ module.exports = generators.Base.extend({
       var done = this.async();
       ncp(this.sourceRoot(), this.destinationRoot(), {
         filter: function(fileName) {
-          return !fileName.endsWith('.tpl');
+          return fileName && fileName.endsWith && !fileName.endsWith('.tpl');
         }
       }, function(err) {
         if (err) {
