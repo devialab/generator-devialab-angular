@@ -14,7 +14,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "6.2.0",
+    "babel-core": "6.2.1",
     "grunt": "0.4.5",
     "grunt-autoprefixer": "3.0.3",
     "grunt-cli": "0.1.13",
@@ -28,7 +28,7 @@
     "grunt-contrib-htmlmin": "0.6.0",
     "grunt-contrib-imagemin": "1.0.0",
     "grunt-contrib-jshint": "0.11.3",
-    "grunt-contrib-uglify": "0.10.1",
+    "grunt-contrib-uglify": "0.11.0",
     "grunt-contrib-watch": "0.6.1",
     "grunt-filerev": "2.3.1",
     "grunt-google-cdn": "0.4.3",
@@ -52,7 +52,7 @@
     "karma-phantomjs-launcher": "0.2.1",
     "karma-spec-reporter": "0.0.22",
     "load-grunt-tasks": "3.3.0",
-    "phantomjs": "1.9.18",
+    "phantomjs": "1.9.19",
     "serve-static": "1.10.0",
     "time-grunt": "1.2.2"
   },
