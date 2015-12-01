@@ -5,6 +5,10 @@ dist
 .coverage
 .sass-cache
 bower_components
-.idea
 *.iml
 *.log
+
+# IDEs
+*.sublime-project
+*.sublime-workspace
+.idea
