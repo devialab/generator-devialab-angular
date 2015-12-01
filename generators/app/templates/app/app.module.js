@@ -18,6 +18,7 @@
     'app.login',
     'app.content',
     'app.ui',
+    'app.session-transfer',
     'app.user-layout',
     'app.utils'
 
