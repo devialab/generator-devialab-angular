@@ -9,7 +9,7 @@
   angular.module('app').factory('usersService', usersService);
 
   /* @ngInject */
-  function usersService(_, $sessionStorage, $localStorage, corbelDriver, corbel, config) {
+  function usersService($rootScope, _, $sessionStorage, $localStorage, corbelDriver, corbel, config) {
 
     // sessionStorage by default
     var storage = $sessionStorage;
@@ -21,12 +21,15 @@
       getMe: getMe,
       isLogged: isLogged,
       isLoggedSync: isLoggedSync,
-      setToken: setToken
+      setToken: setToken,
+      update: update,
+      confirm: confirm
     };
 
     return services;
 
     function _resetAll() {
+      $rootScope.$broadcast('logout');
       $localStorage.$reset();
       $sessionStorage.$reset();
       storage = $sessionStorage;
@@ -47,6 +50,9 @@
       }).then(function(response) {
         storage.token = response.data;
         return getMe(true);
+      }).then(function(user) {
+        $rootScope.$broadcast('login', user);
+        return user;
       });
     }
 
@@ -132,6 +138,35 @@
         storage = $localStorage;
       }
       storage.token = token;
+    }
+
+    /**
+     * Updates user info
+     * @param  {Object} user
+     * @return {Promise}
+     */
+    function update(user) {
+      return corbelDriver.iam.user('me').update(user);
+    }
+
+    /**
+     * Checks user password for logged users, useful for password required actions
+     * @param  {string} password
+     * @return {Promise}
+     */
+    function confirm(password) {
+      return getMe().then(function(user) {
+        // Do not override current user token
+        return corbelDriver.clone().iam.token().create({
+          claims: {
+            'basic_auth.username': user.username,
+            'basic_auth.password': password
+          }
+        }).then(function(response) {
+          storage.token = response.data;
+          return user;
+        });
+      });
     }
 
   }
