@@ -5,7 +5,7 @@
   "corbel.clientSecret": "<%= clientSecret %>",
   "corbel.domain": "<%= domain %>",
   "corbel.scopes": "<%= domain %>:comp",
-  "corbel.userScopes": "<%= domain %>:comp",
+  "corbel.userScopes": "<%= domain %>:comp:user",
   "corbel.audience": "http://iam.corbel.io",
   "lang": "en",
   "debug": false,
