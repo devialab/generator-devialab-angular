@@ -14,18 +14,22 @@
 }
 
 .text-inverse {
-  color: white !important;
-  fill: white !important;
+  color: $white-color !important;
+  fill: $white-color !important;
 }
 
 .text-transparent {
-  color: black !important;
-  fill: black !important;
+  color: $black-color !important;
+  fill: $black-color !important;
   opacity: 0.5 !important;
 }
 
+.bg-well {
+  background-color: $gray-light;
+}
+
 .bg-inverse {
-  background-color: white !important;
+  background-color: $white-color !important;
 }
 
 .pad-top-10 {
@@ -114,16 +118,16 @@
 
 
 /* centered columns styles */
+
 .row-centered {
-    text-align:center;
+  text-align: center;
 }
+
 .col-centered {
-    display:inline-block;
-    float:none !important;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+  display: inline-block;
+  float: none !important;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px;
 }
-
-
