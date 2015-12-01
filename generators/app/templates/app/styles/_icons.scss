@@ -18,3 +18,14 @@
 .icon-rotate-left {
   @include rotate(-90deg);
 }
+
+.glyphicon {
+  &.glyphicon-animate-rotate {
+    &:before {
+      -webkit-animation: spin 1s infinite linear;
+      -moz-animation: spin 1s infinite linear;
+      -o-animation: spin 1s infinite linear;
+      animation: spin 1s infinite linear;
+    }
+  }
+}
