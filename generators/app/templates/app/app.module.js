@@ -17,8 +17,8 @@
     'app.landing',
     'app.login',
     'app.content',
-    'app.ui',
     'app.session-transfer',
+    'app.ui',
     'app.user-layout',
     'app.utils'
 
@@ -50,7 +50,7 @@
   }
 
   /* @ngInject */
-  function init($log, corbelDriver, config, usersService) {
+  function init($log, $state, corbelDriver, config, usersService) {
 
     /**
      * CORBEL
@@ -58,6 +58,12 @@
     corbelDriver.on('token:refresh', function(token) {
       $log.debug('app.module:token:refresh');
       usersService.setToken(token);
+    });
+
+    corbelDriver.on('service:request:after', function(response) {
+      if (response.status === 401) {
+        $state.go('login');
+      }
     });
 
     usersService.isLogged().catch(function() {
