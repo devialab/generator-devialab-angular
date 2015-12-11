@@ -86,6 +86,15 @@ grunt serve --env prod
 	```
 
 
+# Download latest locales
+
+Download latest locales from [webtranslateit.com](https://webtranslateit.com)
+
+	```
+	grunt locales
+	```
+
+
 # Release
 
 ```

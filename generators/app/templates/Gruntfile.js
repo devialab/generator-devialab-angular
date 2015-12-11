@@ -577,6 +577,34 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.registerTask('locales', function() {
+
+    var request = require('request');
+    var async = require('async');
+
+    var done = this.async();
+    var targetDir = 'app';
+    var supportedLangs = ['en', 'es'];
+    var urlBase = 'https://webtranslateit.com/api/projects/PUBLIC_KEY/files/FILE_CODE/locales/';
+
+    var langsUrl = supportedLangs.map(function(langName) {
+      return urlBase + langName;
+    });
+    
+    async.map(langsUrl, request, function(error, responses, body) {
+      responses.map(function(response, index) {
+        if (!error && response.statusCode === 200) {
+          response = JSON.parse(response.body);
+
+          grunt.file.write(targetDir + '/json/lang/' + supportedLangs[index] + '.json', JSON.stringify(response, null, '  '));
+        } else {
+          grunt.log.errorlns('Got an error: ', error, ', status code: ' + response.statusCode);
+        }
+      });
+      done();
+    });
+
+  });
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
     if (target === 'dist') {
