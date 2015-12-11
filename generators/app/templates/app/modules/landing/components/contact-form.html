@@ -2,9 +2,9 @@
   <h3 class="text-center" translate="contact.form.title"></h3>
   <div class="col-sm-6 col-sm-offset-3 no-gutter">
 
-    <div class="form-group col-sm-8" ng-class="{'has-error': contactform.name.$invalid && contactform.name.$dirty}">
-      <label for="contact-name" class="visuallyhidden" translate="form.name"></label>
-      <input type="text" class="form-control" id="contact-name" name="name" ng-model="vm.name" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.name">
+    <div class="form-group col-sm-8" ng-class="{'has-error': contactform.firstName.$invalid && contactform.firstName.$dirty}">
+      <label for="contact-first-name" class="visuallyhidden" translate="form.firstName"></label>
+      <input type="text" class="form-control" id="contact-first-name" name="firstName" ng-model="vm.firstName" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.firstName">
     </div>
     
     <div class="form-group col-sm-8" ng-class="{'has-error': contactform.email.$invalid && contactform.email.$dirty}">
@@ -24,7 +24,7 @@
     <!-- ERRORS -->
     <div class="form-group form-message error-message col-sm-12" role="alert" ng-show="vm.error || (contactform.$submitted && contactform.$invalid)">
       <div ng-show="vm.error">{{vm.error}}</div>
-      <div ng-show="contactform.name.$error.required && contactform.name.$dirty" translate="form.name.error.required"></div>
+      <div ng-show="contactform.firstName.$error.required && contactform.firstName.$dirty" translate="form.firstName.error.required"></div>
       <div ng-show="contactform.email.$error.required && contactform.email.$dirty" translate="form.email.error.required"></div>
       <div ng-show="contactform.email.$error.email && contactform.email.$dirty" translate="form.email.error.email"></div>
       <div ng-show="contactform.subject.$error.required && contactform.subject.$dirty" translate="form.subject.error.required"></div>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="form-group col-sm-12">
-      <button type="submit" class="btn btn-primary text-uppercase" ng-click="vm.sendForm(vm.email, vm.name, vm.subject, vm.message)" translate="form.submit"></button>
+      <button type="submit" class="btn btn-primary text-uppercase" ng-click="vm.sendForm(vm.email, vm.firstName, vm.subject, vm.message)" translate="form.submit"></button>
     </div>
 
   </div>
