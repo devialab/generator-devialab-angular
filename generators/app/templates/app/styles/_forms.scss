@@ -1,3 +1,7 @@
 /**
  * FORMS CUSTOM STYLES
  */
+
+label.required:after {
+  content: ' *';
+}
