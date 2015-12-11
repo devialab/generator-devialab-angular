@@ -23,6 +23,7 @@
      * @param {String} lang Language identificator
      */
     function setLang(lang) {
+      lang = lang.split('-')[0];
       $localStorage.lang = lang;
       $translate.use(lang);
       $rootScope.$broadcast('lang:change', lang);
@@ -49,12 +50,17 @@
         lang = navigator.languages[0];
       }
 
+      lang = lang.split('-')[0];
+
       // user default lang
       if ($localStorage.lang) {
         lang = $localStorage.lang;
       } else {
         return usersService.isLogged().then(function(user) {
           user.properties = user.properties || {};
+          user.properties.lang = user.properties.lang || '';
+          
+          user.properties.lang = user.properties.lang.split('-')[0];
           return user.properties.lang ? user.properties.lang : lang;
         }).catch(function() {
           return lang;

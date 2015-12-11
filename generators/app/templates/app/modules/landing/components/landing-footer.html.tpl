@@ -17,7 +17,7 @@
       <div class="col-xs-6 col-sm-2">
         <ul>
           <li><span class="lead" translate="languaje"></span></li>
-          <li><a href="" translate="spanish" ng-click="vm.setLang('es-ES')"></a></li>
+          <li><a href="" translate="spanish" ng-click="vm.setLang('es')"></a></li>
           <li><a href="" translate="english" ng-click="vm.setLang('en')"></a></li>
         </ul>
       </div>
