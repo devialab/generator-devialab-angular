@@ -16,7 +16,7 @@
 
     var vm = this;
 
-    vm.username = '';
+    vm.firstName = '';
 
     vm.logout = logout;
     vm.isActive = isActive;
@@ -26,9 +26,21 @@
     return vm;
 
     function _init() {
-      return usersService.getMe().then(function(user) {
-        vm.username = user.username;
+      _addEventListeners();
+      return _loadMe().then(function() {
         $scope.$digest();
+      });
+    }
+
+    function _addEventListeners() {
+      $rootScope.$on('user:change', function(event, newUser) {
+        vm.firstName = newUser.firstName;
+      });
+    }
+
+    function _loadMe() {
+      return usersService.getMe().then(function(user) {
+        vm.firstName = user.firstName;
       });
     }
 

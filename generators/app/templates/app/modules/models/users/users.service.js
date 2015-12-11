@@ -21,6 +21,7 @@
       getMe: getMe,
       isLogged: isLogged,
       isLoggedSync: isLoggedSync,
+      isEmailAvailable: isEmailAvailable,
       setToken: setToken,
       update: update,
       confirm: confirm
@@ -29,7 +30,6 @@
     return services;
 
     function _resetAll() {
-      $rootScope.$broadcast('logout');
       $localStorage.$reset();
       $sessionStorage.$reset();
       storage = $sessionStorage;
@@ -62,17 +62,18 @@
     }
 
     function logout() {
+      $rootScope.$broadcast('logout');
       return corbelDriver.iam.user('me').signOut()
         .then(_regenerateToken)
         .catch(_regenerateToken);
     }
 
-    function signup(email, username, password) {
+    function signup(email, firstName, password) {
       return corbelDriver.iam.users().create({
-        firstName: username,
+        firstName: firstName,
         lastName: '',
         email: email,
-        username: username,
+        username: email,
         password: password,
         scopes: config.get('corbel.userScopes').split(' ')
       });
@@ -127,6 +128,15 @@
     }
 
     /**
+     * Checks if an email is available or not
+     * @param  {string}   email
+     * @return {Promise}  A promise that resolves if the email is available, otherwise rejects
+     */
+    function isEmailAvailable(email) {
+      return corbelDriver.iam.email().availability(email);
+    }
+
+    /**
      * Sets the token object value
      * @param {object} token
      * @param {string} token.accessToken
@@ -143,10 +153,20 @@
     /**
      * Updates user info
      * @param  {Object} user
+     * @param  {string} user.email
+     * @param  {string} user.username
+     * @param  {string} user.password
+     * @param  {string} user.firstName
+     * @param  {string} user.lastName
+     * @param  {Object} user.properties
      * @return {Promise}
      */
     function update(user) {
-      return corbelDriver.iam.user('me').update(user);
+      return corbelDriver.iam.user('me').update(user).then(function() {
+        user = _.omit(user, 'password');
+        angular.merge(storage.user, user);
+        $rootScope.$broadcast('user:change', storage.user);
+      });
     }
 
     /**

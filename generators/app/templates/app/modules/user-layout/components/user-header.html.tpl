@@ -29,7 +29,7 @@
 
               <li class="dropdown" ng-class="{active: vm.isActive('account')}">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <span>{{vm.username}}</span>
+                  <span>{{vm.firstName}}</span>
                   <svg class="icon-arrow-down-small">
                     <use xlink:href="/images/icons.svg#icon-arrow-down-small"></use>
                   </svg>
