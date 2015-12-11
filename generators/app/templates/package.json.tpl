@@ -14,7 +14,6 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "6.2.1",
     "grunt": "0.4.5",
     "grunt-autoprefixer": "3.0.3",
     "grunt-cli": "0.1.13",

@@ -20,7 +20,8 @@ module.exports = function(config) {
     files: [
       // PhantomJS Promise polifyll
       // http://stackoverflow.com/questions/29391111/karma-phantomjs-and-es6-promises
-      'node_modules/babel-core/browser-polyfill.js',
+      // http://stackoverflow.com/questions/24224323/bind-polyfill-for-phantomjs
+      'bower_components/bind-polyfill/index.js',
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',

@@ -33,6 +33,7 @@
     "angular-sanitize": "1.4.7"
   },
   "devDependencies": {
-    "angular-mocks": "1.4.7"
+    "angular-mocks": "1.4.7",
+    "bind-polyfill": "1.0.0"
   }
 }
