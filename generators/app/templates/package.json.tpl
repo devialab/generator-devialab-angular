@@ -41,6 +41,7 @@
     "grunt-svgmin": "3.1.0",
     "grunt-usemin": "3.1.1",
     "grunt-version-check": "0.3.1",
+    "grunt-webtranslateit": "0.0.2",
     "grunt-wiredep": "2.0.0",
     "jasmine-core": "2.3.4",
     "jshint-stylish": "2.1.0",
