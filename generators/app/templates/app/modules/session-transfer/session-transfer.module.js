@@ -13,7 +13,7 @@
    */
   angular.module('app.session-transfer', []).run(init);
 
-  function init(usersService, corbelDriver) {
+  function init() {
 
     // transfers sessionStorage from one tab to another
     var sessionStorageTransfer = function(event) {
