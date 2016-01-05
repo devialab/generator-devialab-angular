@@ -1,82 +1,147 @@
 <section class="container account-section">
   <article class="row">
 
-
     <uib-tabset vertical="true" type="pills">
-      <uib-tab heading="Edit your personal information">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, maiores voluptates sed at provident magnam amet deleniti ut dignissimos numquam quaerat ab libero ducimus explicabo asperiores tenetur fugiat modi. Rerum!
-        </p>
+      <uib-tab>
+
+        <uib-tab-heading>
+          <span translate="account.profile"></span>
+        </uib-tab-heading>
+
+        <h3 translate="account.profile.title"></h3>
+        <p translate="account.profile.body"></p>
 
         <!-- Personal information form -->
-        <form class="col-sm-4">
-          <div class="form-group">
-            <div class="row">
-              <div class="col-sm-4">
-                <img src="http://placehold.it/150?text=photo" class="img-responsive">
-              </div>
-              <div class="col-sm-8">
-                <label for="exampleInputFile">Photo</label>
-                <input type="file" id="exampleInputFile">
-              </div>
-            </div>
+        <form id="account-form" name="vm.accountForm" class="col-sm-4">
+
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.accountForm.firstName.$invalid && vm.accountForm.firstName.$dirty}">
+            <label class="required" for="firstName" translate="form.firstname.label"></label>
+            <input type="text" name="firstName" class="form-control" id="firstName" ng-model="vm.firstName" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.firstname">
+
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
           </div>
-          <div class="form-group">
-            <label for="account-name">Name *</label>
-            <input type="text" class="form-control" id="account-name" placeholder="Sonia" required>
+
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.accountForm.lastName.$invalid && vm.accountForm.lastName.$dirty}">
+            <label class="required" for="lastName" translate="form.lastname.label"></label>
+            <input type="text" name="lastName" class="form-control" id="lastName" ng-model="vm.lastName" ng-change="vm.error = ''" required translate translate-attr-placeholder="form.lastname">
+
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
           </div>
-          <div class="form-group">
-            <label for="account-surname">Surname *</label>
-            <input type="text" class="form-control" id="account-surname" placeholder="Rodríguez" required>
+
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.accountForm.email.$invalid && vm.accountForm.email.$dirty}">
+            <label class="required" for="email" translate="form.email.label"></label>
+            <input type="email" name="email" class="form-control" id="email" ng-model="vm.email" ng-change="vm.error = ''" required email translate translate-attr-placeholder="form.email">
+
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
           </div>
-          <div class="form-group">
-            <label for="account-username">Username *</label>
-            <input type="text" class="form-control" id="account-username" placeholder="Username" required>
+
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.accountForm.phone.$invalid && vm.accountForm.phone.$dirty}">
+            <label for="phone" translate="form.phone.label"></label>
+            <input type="text" name="phone" class="form-control" id="phone" ng-model="vm.phone" ng-change="vm.error = ''" translate translate-attr-placeholder="form.phone">
+
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
           </div>
+
           <div class="form-group">
-            <label for="account-email">Email *</label>
-            <input type="email" class="form-control" id="account-email" placeholder="example@email.com" required>
+            <label class="required" for="account-language" translate="language"></label>
+            <ui-select value="vm.lang" options="vm.langOptions"></ui-select>
           </div>
-          <div class="form-group">
-            <label for="account-phone">Phone</label>
-            <input type="text" class="form-control" id="account-phone" placeholder="677 77 88 99">
+
+
+          <button type="submit" class="btn btn-primary" ng-click="vm.accountForm.$valid && vm.updateAccount()" translate="form.save"></button>
+
+
+          <!-- ERRORS -->
+          <div class="form-group form-message error-message" role="alert" ng-show="vm.error || (vm.accountForm.$invalid && vm.accountForm.$submitted)">
+            <div ng-show="!vm.accountForm.$invalid && vm.error">{{vm.error}}</div>
+            <div ng-show="vm.accountForm.firstName.$error.required && vm.accountForm.firstName.$dirty" translate="form.firstname.error.required"></div>
+            <div ng-show="vm.accountForm.lastName.$error.required && vm.accountForm.lastName.$dirty" translate="form.lastname.error.required"></div>
+            <div ng-show="vm.accountForm.email.$error.required && vm.accountForm.email.$dirty" translate="form.email.error.required"></div>
+            <div ng-show="vm.accountForm.email.$error.email && vm.accountForm.email.$dirty" translate="form.email.error.email"></div>
           </div>
-          <div class="form-group">
-            <label for="account-language">Language *</label>
-            <select id="account-language" class="form-control" required>
-              <option>Español</option>
-              <option>Inglés</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Save</button>
+
         </form>
 
       </uib-tab>
-      <uib-tab heading="Change your password">
 
-       <div class="text-center">
-            Do you want change your password?
+      <uib-tab>
+
+        <uib-tab-heading>
+          <span translate="account.password"></span>
+        </uib-tab-heading>
+
+        <h3 translate="account.password.title"></h3>
+
+        <!-- Personal information form -->
+        <form id="password-form" name="vm.passwordForm" class="col-sm-4">
+
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.passwordForm.current.$invalid && vm.passwordForm.current.$dirty}">
+            <label for="current" translate="account.password.form.current" class="required"></label>
+            <input type="password" name="current" class="form-control" id="current" ng-model="vm.current" ng-change="vm.error = ''" required translate translate-attr-placeholder="account.password.form.current">
+
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
           </div>
 
-          <!-- Personal information form -->
-          <form class="col-sm-4">
-            <div class="form-group">
-              <label for="account-current-password">Current password *</label>
-              <input type="password" class="form-control" id="account-current-password" required>
-            </div>
-            <div class="form-group">
-              <label for="account-new-password">New password *</label>
-              <input type="password" class="form-control" id="account-new-password" required>
-            </div>
-            <div class="form-group">
-              <label for="account-repeat-new-password">Repeat new password *</label>
-              <input type="password" class="form-control" id="account-repeat-new-password" required>
-            </div>
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.passwordForm.new.$invalid && vm.passwordForm.new.$dirty}">
+            <label for="new" translate="account.password.form.new" class="required"></label>
+            <input type="password" name="new" class="form-control" id="new" ng-model="vm.new" ng-change="vm.error = ''" required translate translate-attr-placeholder="account.password.form.new">
 
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-          </form>
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
+          </div>
+
+          <div class="form-group has-feedback has-feedback-right" ng-class="{'has-error': vm.passwordForm.repeat.$invalid && vm.passwordForm.repeat.$dirty}">
+            <label for="repeat" translate="account.password.form.repeat" class="required"></label>
+            <input type="password" name="repeat" class="form-control" id="repeat" ng-model="vm.repeat" ng-change="vm.error = ''" required equals="{{vm.new}}" translate translate-attr-placeholder="account.password.form.repeat">
+
+            <span class="form-control-feedback">
+              <svg class="icon-write">
+              <use xlink:href="/images/icons.svg#icon-write"></use>
+              </svg>
+            </span>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary" ng-click="vm.passwordForm.$valid && vm.changePassword()" translate="form.save"></button>
+
+
+          <!-- ERRORS -->
+          <div class="form-group form-message error-message" role="alert" ng-show="vm.error || (vm.passwordForm.$invalid && vm.passwordForm.$submitted)">
+            <div ng-show="!vm.passwordForm.$invalid && vm.error">{{vm.error}}</div>
+            <div ng-show="vm.passwordForm.current.$error.required && vm.passwordForm.current.$dirty" translate="account.password.form.current.error.required"></div>
+            <div ng-show="vm.passwordForm.new.$error.required && vm.passwordForm.new.$dirty" translate="account.password.form.new.error.required"></div>
+            <div ng-show="vm.passwordForm.repeat.$error.required && vm.passwordForm.repeat.$dirty" translate="account.password.form.repeat.error.required"></div>
+            <div ng-show="vm.passwordForm.repeat.$error.equals && vm.passwordForm.repeat.$dirty" translate="account.password.form.repeat.error.equals"></div>
+          </div>
+
+        </form>
+
       </uib-tab>
+
     </uib-tabset>
 
   </article>
