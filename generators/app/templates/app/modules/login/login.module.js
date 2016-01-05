@@ -7,11 +7,6 @@
    * @description
    * # app.login
    */
-  angular.module('app.login', [
-    'underscore',
-    'ngStorage',
-    'ui.router',
-    'angular-corbel'
-  ]);
+  angular.module('app.login', []);
 
 })();

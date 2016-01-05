@@ -74,7 +74,7 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="prefetch" href="json/lang/es-ES.json" />
+  <link rel="prefetch" href="json/lang/es.json" />
 
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->

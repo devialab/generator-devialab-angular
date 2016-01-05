@@ -1,9 +1,9 @@
 (function() {
 
   /**
-   * app.landing Module
+   * app.user-layout Module
    *
-   * landing-header directive
+   * user-layout-header directive
    */
   angular.module('app.user-layout').directive('userHeader', UserHeader);
 
