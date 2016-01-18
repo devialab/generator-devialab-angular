@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="devialab.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <link rel="manifest" href="images/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Example</title>
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) ../styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
+  <link rel="stylesheet" href="../bower_components/angular-loading-bar/build/loading-bar.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) ../styles/main.css -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <!-- endbuild -->
+  <style>
+  .ui-colors li {
+    width: 140px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .ui-colors li .box-color {
+    margin: 0 auto 5px;
+    width: 90px;
+    height: 90px;
+  }
+  
+  .ui-colors li code {
+    font-size: 10px;
+    display: inline-block;
+  }
+  
+  .ui-tables table {
+    margin-bottom: 1em;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <h1>UI Kit</h1>
+      <p>For developers</p>
+    </div>
+
+
+    <div class="ui-colors">
+      <div class="page-header">
+        <h1>Colors</h1>
+      </div>
+      <ul class="list-inline">
+        <li>
+          <div class="box-color" style="background-color: #424242;"></div>
+          <p>#424242 <code>$ui-kit-grays-one</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #5B6672;"></div>
+          <p>#5B6672 <code>$ui-kit-grays-two</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #9B9B9B;"></div>
+          <p>#9B9B9B <code>$ui-kit-grays-three</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #B1B1B1;"></div>
+          <p>#B1B1B1 <code>$ui-kit-grays-four</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #D8D8D8;"></div>
+          <p>#D8D8D8 <code>$ui-kit-grays-five</code></p>
+        </li>
+      </ul>
+      <ul class="list-inline">
+        <li>
+          <div class="box-color" style="background-color: #192533;"></div>
+          <p>#192533 <code>$ui-kit-blue-one</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #243342;"></div>
+          <p>#243342 <code>$ui-kit-blue-two</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #5A7D9F;"></div>
+          <p>#5A7D9F <code>$ui-kit-blue-three</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #086C49;"></div>
+          <p>#086C49 <code>$ui-kit-green-one</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #238D68;"></div>
+          <p>#238D68 <code>$ui-kit-green-two</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #6AB616;"></div>
+          <p>#6AB616 <code>$ui-kit-green-three</code></p>
+        </li>
+      </ul>
+      <ul class="list-inline">
+        <li>
+          <div class="box-color" style="background-color: #FF9C00;"></div>
+          <p>#FF9C00 <code>$ui-kit-orange</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #CD5FD9;"></div>
+          <p>#CD5FD9 <code>$ui-kit-purple</code></p>
+        </li>
+        <li>
+          <div class="box-color" style="background-color: #D85351;"></div>
+          <p>#D85351 <code>$ui-kit-red</code></p>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="ui-font">
+      <div class="page-header">
+        <h1>Font</h1>
+      </div>
+      <h1>Cabin - Semibold 45</h1>
+      <h2>Cabin - Regular 28</h2>
+      <h3>Cabin - Regular 20</h3>
+      <h4>Cabin - Regular 18</h4>
+      <h5>Cabin - Regular 16</h5>
+      <br/>
+      <p class="leader">Helvetica Neue - Regular 18</p>
+      <p class="lead">Helvetica Neue - Regular 16</p>
+      <p>Helvetica Neue - Regular 15</p>
+      <p class="small">Helvetica Neue - Regular 12</p>
+    </div>
+
+
+    <div class="ui-links">
+      <div class="page-header">
+        <h1>Links</h1>
+      </div>
+      <button type="button" class="btn-link">Link</button>
+      <button type="button" class="btn-link active">Link activo</button>
+    </div>
+
+
+    <div class="ui-buttons-colors">
+      <div class="page-header">
+        <h1>Colours of button</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-lg btn-block">Default</button>
+          <button type="button" class="btn btn-lg btn-block" disabled>Default</button>
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-lg btn-block btn-primary">Login</button>
+          <button type="button" class="btn btn-lg btn-block btn-primary" disabled>Login</button>
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-lg btn-block btn-default">Clear path</button>
+          <button type="button" class="btn btn-lg btn-block btn-default" disabled>Clear path</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="ui-buttons-size">
+      <div class="page-header">
+        <h1>Sizes of button</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <h2>XL</h2>
+          <p>
+            <button type="button" class="btn btn-lg btn-block">Default</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-block with-icon">Default <i class="glyphicon glyphicon-bell"></i></button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-block btn-default">Normal</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Primary</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-block btn-primary with-icon">Primary <i class="glyphicon glyphicon-bell"></i></button>
+          </p>
+        </div>
+        <div class="col-sm-3">
+          <h2>L</h2>
+          <p>
+            <button type="button" class="btn btn-lg">Default</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg with-icon">Default <i class="glyphicon glyphicon-bell"></i></button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-default">Normal</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-primary">Primary</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-primary with-icon">Primary <i class="glyphicon glyphicon-bell"></i></button>
+          </p>
+        </div>
+        <div class="col-sm-3">
+          <h2>M</h2>
+          <p>
+            <button type="button" class="btn btn-sm">Default</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-sm btn-default">Normal</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-sm btn-primary">Primary</button>
+          </p>
+        </div>
+        <div class="col-sm-3">
+          <h2>XS</h2>
+          <p>
+            <button type="button" class="btn btn-xs">Default</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-xs btn-default">Normal</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-xs btn-primary">Primary</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-xs btn-primary btn-tall">Primary</button>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="ui-icons">
+      <div class="page-header">
+        <h1>Icons</h1>
+      </div>
+      <ul class="list-inline">
+        <li>
+          <svg class="icon-add">
+            <use xlink:href="/images/icons.svg#icon-add"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-arrow-down-small">
+            <use xlink:href="/images/icons.svg#icon-arrow-down-small"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-arrow-right">
+            <use xlink:href="/images/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-delete">
+            <use xlink:href="/images/icons.svg#icon-delete"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-lock">
+            <use xlink:href="/images/icons.svg#icon-lock"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-photo">
+            <use xlink:href="/images/icons.svg#icon-photo"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-user">
+            <use xlink:href="/images/icons.svg#icon-user"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-alert">
+            <use xlink:href="/images/icons.svg#icon-alert"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-arrow-next">
+            <use xlink:href="/images/icons.svg#icon-arrow-next"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-check">
+            <use xlink:href="/images/icons.svg#icon-check"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-close">
+            <use xlink:href="/images/icons.svg#icon-close"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-paper">
+            <use xlink:href="/images/icons.svg#icon-paper"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-question">
+            <use xlink:href="/images/icons.svg#icon-question"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-write">
+            <use xlink:href="/images/icons.svg#icon-write"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-arrow-down-big">
+            <use xlink:href="/images/icons.svg#icon-arrow-down-big"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-arrow-prev">
+            <use xlink:href="/images/icons.svg#icon-arrow-prev"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-bullet">
+            <use xlink:href="/images/icons.svg#icon-bullet"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-email">
+            <use xlink:href="/images/icons.svg#icon-email"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-phone">
+            <use xlink:href="/images/icons.svg#icon-phone"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="icon-tick-check">
+            <use xlink:href="/images/icons.svg#icon-tick-check"></use>
+          </svg>
+        </li>
+      </ul>
+      <svg class="icon-question transparent">
+        <use xlink:href="/images/icons.svg#icon-question"></use>
+      </svg> Icon with <code>transparent</code> class
+    </div>
+
+
+    <div class="ui-checkbox-radio">
+      <div class="page-header">
+        <h1>Checbox & radiobuttons</h1>
+      </div>
+      <div class="row">
+        <form class="col-md-3">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="optionsCheckbox1" value="option1" checked>
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-check"></use></svg>
+            </span>
+              <span>Item 1</span>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="optionsCheckbox2" value="option2">
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-check"></use></svg>
+            </span>
+              <span>Item 2</span>
+            </label>
+          </div>
+          <div class="checkbox disabled">
+            <label>
+              <input type="checkbox" id="optionsCheckbox3" value="option3" disabled>
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-check"></use></svg>
+            </span>
+              <span>Item 3 (disabled)</span>
+            </label>
+          </div>
+        </form>
+        <form class="col-md-3">
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-bullet"></use></svg>
+            </span>
+              <span>Item 1</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-bullet"></use></svg>
+            </span>
+              <span>Item 2</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-bullet"></use></svg>
+            </span>
+              <span>Item 3</span>
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" disabled>
+              <span class="form-control-feedback">
+              <svg class="icon-check"><use xlink:href="/images/icons.svg#icon-bullet"></use></svg>
+            </span>
+              <span>Item 4 (disabled)</span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="ui-forms">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="forms">Forms</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Sizes</h2>
+          <p>
+            <input class="form-control input-lg" type="text" placeholder=".input-lg">
+          </p>
+          <p>
+            <input class="form-control" type="text" placeholder="Default input">
+          </p>
+          <p>
+            <input class="form-control input-sm" type="text" placeholder=".input-sm">
+          </p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="well bs-component">
+            <form class="form-horizontal">
+              <fieldset>
+                <legend>Legend</legend>
+                <div class="form-group">
+                  <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                  <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                  <div class="col-lg-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Checkbox
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                  <div class="col-lg-10">
+                    <textarea class="form-control" rows="3" id="textArea"></textarea>
+                    <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">Radios</label>
+                  <div class="col-lg-10">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Option one is this
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="select" class="col-lg-2 control-label">Selects</label>
+                  <div class="col-lg-10">
+                    <select class="form-control" id="select">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <br>
+                    <select multiple="" class="form-control">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                    <button type="reset" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-lg-offset-1">
+
+          <form class="bs-component">
+            <div class="form-group">
+              <label class="control-label" for="focusedInput">Focused input</label>
+              <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="disabledInput">Disabled input</label>
+              <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+            </div>
+
+            <div class="form-group has-warning">
+              <label class="control-label" for="inputWarning">Input warning</label>
+              <input type="text" class="form-control" id="inputWarning">
+            </div>
+
+            <div class="form-group has-error">
+              <label class="control-label" for="inputError">Input error</label>
+              <input type="text" class="form-control" id="inputError">
+            </div>
+
+            <div class="form-group has-success">
+              <label class="control-label" for="inputSuccess">Input success</label>
+              <input type="text" class="form-control" id="inputSuccess">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="inputLarge">Large input</label>
+              <input class="form-control input-lg" type="text" id="inputLarge">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="inputDefault">Default input</label>
+              <input type="text" class="form-control" id="inputDefault">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="inputSmall">Small input</label>
+              <input class="form-control input-sm" type="text" id="inputSmall">
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <form class="col-lg-5 col-lg-offset-1">
+
+          <div class="form-group has-feedback has-feedback-right">
+            <label class="required" for="firstName">Input with svg icon</label>
+            <input type="text" name="firstName" class="form-control" placeholder="Input with svg icon">
+
+            <span class="form-control-feedback">
+            <svg class="icon-write">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-write"></use>
+            </svg>
+          </span>
+          </div>
+
+          <div class="form-group form-group-lg has-feedback has-feedback-right">
+            <label class="required" for="firstName">Input with svg icon lg</label>
+            <input type="text" name="firstName" class="form-control input-lg" placeholder="Input with svg icon">
+
+            <span class="form-control-feedback">
+            <svg class="icon-write">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-write"></use>
+            </svg>
+          </span>
+          </div>
+
+          <div class="form-group has-feedback has-feedback-right">
+            <label class="required" for="firstName">Input with glyphicon</label>
+            <input type="text" name="firstName" class="form-control" placeholder="Input with glyphicon">
+
+            <span class="form-control-feedback">
+            <i class="glyphicon glyphicon-bell"></i>
+          </span>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Input addons</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Button</button>
+            </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Input addons</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+              <button class="btn" type="button">Button</button>
+            </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Input addons lg</label>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control input-lg">
+              <span class="input-group-btn">
+              <button class="btn" type="button">Button</button>
+            </span>
+            </div>
+          </div>
+
+        </form>
+
+        <form class="col-lg-4 col-lg-offset-1">
+
+          <div class="form-group">
+            <label class="control-label">Input addons</label>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <input type="text" class="form-control" aria-label="...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Input addons</label>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <input type="text" class="form-control" aria-label="...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Input addons</label>
+            <div class="input-group">
+              <input type="text" class="form-control" aria-label="...">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group has-feedback has-feedback-right">
+            <label class="control-label">Input addons</label>
+            <div class="input-group has-button-left">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <label class="hidden">Hidden label</label>
+              <input type="text" class="form-control" aria-label="...">
+
+              <span class="form-control-feedback">
+              <i class="glyphicon glyphicon-bell"></i>
+            </span>
+            </div>
+          </div>
+
+          <div class="form-group has-feedback has-feedback-right">
+            <label class="control-label">Input addons lg</label>
+            <div class="input-group input-group-lg has-button-left">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <label class="hidden">Hidden label</label>
+              <input type="text" class="form-control input-lg" aria-label="...">
+
+              <span class="form-control-feedback">
+              <i class="glyphicon glyphicon-bell"></i>
+            </span>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+    <div class="ui-tables">
+      <div class="page-header">
+        <h1>Tables</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="table-container">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2">1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@TwBootstrap</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-header">
+      <h1>Thumbnails</h1>
+    </div>
+    <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+
+
+    <div class="page-header">
+      <h1>Labels</h1>
+    </div>
+    <h1>
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </h1>
+    <h2>
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </h2>
+    <h3>
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </h3>
+    <h4>
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </h4>
+    <h5>
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </h5>
+    <h6>
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </h6>
+    <p>
+      <span class="label label-default">Default</span>
+      <span class="label label-primary">Primary</span>
+      <span class="label label-success">Success</span>
+      <span class="label label-info">Info</span>
+      <span class="label label-warning">Warning</span>
+      <span class="label label-danger">Danger</span>
+    </p>
+
+
+    <div class="page-header">
+      <h1>Badges</h1>
+    </div>
+    <p>
+      <a href="#">Inbox <span class="badge">42</span></a>
+    </p>
+    <ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+    </ul>
+
+
+    <div class="page-header">
+      <h1>Dropdown menus</h1>
+    </div>
+    <div class="dropdown theme-dropdown clearfix">
+      <a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li class="active"><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
+
+    <div class="page-header">
+      <h1>Navbars</h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="ui-navs">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="navs">Navs</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 id="nav-tabs">Tabs</h2>
+          <div class="bs-component">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+              <li><a href="#profile" data-toggle="tab">Profile</a></li>
+              <li class="disabled"><a>Disabled</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="home">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+              </div>
+              <div class="tab-pane fade" id="profile">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+              </div>
+              <div class="tab-pane fade" id="dropdown1">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+              </div>
+              <div class="tab-pane fade" id="dropdown2">
+                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+              </div>
+            </div>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h2 id="nav-pills">Pills</h2>
+          <div class="bs-component">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li class="disabled"><a href="#">Disabled</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <br>
+          <div class="bs-component">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li class="disabled"><a href="#">Disabled</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h2 id="nav-breadcrumbs">Breadcrumbs</h2>
+          <div class="bs-component">
+            <ul class="breadcrumb">
+              <li class="active">Home</li>
+            </ul>
+
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li class="active">Library</li>
+            </ul>
+
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Library</a></li>
+              <li class="active">Data</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 id="pagination">Pagination</h2>
+          <div class="bs-component">
+            <ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+
+            <ul class="pagination pagination-lg">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+
+            <ul class="pagination pagination-sm">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h2 id="pager">Pager</h2>
+          <div class="bs-component">
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+
+            <ul class="pager">
+              <li class="previous disabled"><a href="#">← Older</a></li>
+              <li class="next"><a href="#">Newer →</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-header">
+      <h1>Alerts</h1>
+    </div>
+    <div class="alert alert-success" role="alert">
+      <strong>Well done!</strong> You successfully read this important alert message.
+    </div>
+    <div class="alert alert-info" role="alert">
+      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+    </div>
+    <div class="alert alert-warning" role="alert">
+      <strong>Warning!</strong> Best check yo self, you're not looking too good.
+    </div>
+    <div class="alert alert-danger" role="alert">
+      <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </div>
+
+
+    <div class="page-header">
+      <h1>Progress bars</h1>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
+      <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
+      <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
+    </div>
+
+
+    <div class="page-header">
+      <h1>List groups</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+      <!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+          Cras justo odio
+        </a>
+          <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+          <a href="#" class="list-group-item">Morbi leo risus</a>
+          <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+          <a href="#" class="list-group-item">Vestibulum at eros</a>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a>
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a>
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+    </div>
+
+
+    <div class="page-header">
+      <h1>Panels</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+    </div>
+
+
+    <div class="page-header">
+      <h1>Wells</h1>
+    </div>
+    <div class="well">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+    </div>
+
+
+    <div class="page-header">
+      <h1>Carousel</h1>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="//placehold.it/1140x500?text=First+slide" alt="First slide">
+        </div>
+        <div class="item">
+          <img src="//placehold.it/1140x500?text=Second+slide" alt="Second slide">
+        </div>
+        <div class="item">
+          <img src="//placehold.it/1140x500?text=Third+slide" alt="Third slide">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- build:js(.) ../scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="../bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script>
+  <script src="../bower_components/angular-bootstrap-slider/slider.js"></script>
+  <script src="../bower_components/corbel-js/dist/corbel.js"></script>
+  <script src="../bower_components/angular-corbel/dist/angular-corbel.js"></script>
+  <script src="../bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="../bower_components/angular-translate/angular-translate.js"></script>
+  <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <script src="../bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../bower_components/underscore/underscore.js"></script>
+  <script src="../bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+  <script src="../bower_components/ngstorage/ngStorage.js"></script>
+  <script src="../bower_components/svg4everybody/dist/svg4everybody.js"></script>
+  <script src="../bower_components/promise-polyfill/Promise.js"></script>
+  <script src="../bower_components/SHA-1/sha1.js"></script>
+  <script src="../bower_components/angulartics/src/angulartics.js"></script>
+  <script src="../bower_components/angulartics-google-analytics/lib/angulartics-google-analytics.js"></script>
+  <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <!-- endbower -->
+  <script src="../vendor/ie10-viewport-bug-workaround.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js({.,.tmp,app}) ../scripts/scripts.js -->
+  <script src="../app.const.js"></script>
+  <script src="../app.defaultLang.js"></script>
+  <!-- include: "type": "js", "files": ["*.js", "modules/**/*.module.js"] -->
+  <!-- include: "type": "js", "files": ["modules/**/*.js", "!modules/**/*.module.js"] -->
+  <!-- endbuild -->
+
+</body>
+
+</html>
