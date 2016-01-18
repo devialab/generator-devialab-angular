@@ -3,9 +3,12 @@
 
 # Project Management
 
-* [CI](https://codeship.com/projects/102883)
+* [CI](https://codeship.com/projects/projectid)
+* [Basecamp](https://3.basecamp.com/projects/id)
+* [GIT](https://bitbucket.org/devialab/<%= appName %>)
 * [Kanban](https://tree.taiga.io/project/<%= appName %>/backlog)
 * [Chat](https://devialab.slack.com/messages/<%= appName %>/)
+* [Locales](https://webtranslateit.com/en/projects/id)
 
 
 # Environments
