@@ -50,7 +50,7 @@
   }
 
   /* @ngInject */
-  function init($log, $state, corbelDriver, config, usersService) {
+  function init($log, $rootScope, $state, corbelDriver, config, usersService) {
 
     /**
      * CORBEL
@@ -61,9 +61,17 @@
     });
 
     corbelDriver.on('service:request:after', function(response) {
-      if (response.status === 401) {
-        $state.go('login');
+
+      switch (response.status) {
+        case 401:
+          $state.go('login');
+          break;
+        case 0:
+          $rootScope.$broadcast('server:disconnect');
+          $log.warn('server:disconnect');
+          break;
       }
+
     });
 
     usersService.isLogged().catch(function() {
