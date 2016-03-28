@@ -30,7 +30,8 @@
     "promise-polyfill": "3.1.0",
     "angulartics": "1.0.3",
     "angulartics-google-analytics": "0.1.4",
-    "angular-sanitize": "1.4.7"
+    "angular-sanitize": "1.4.7",
+    "angular-moment": "~0.10.3"
   },
   "devDependencies": {
     "angular-mocks": "1.4.7",

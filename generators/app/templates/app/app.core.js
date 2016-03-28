@@ -13,6 +13,7 @@
     'angulartics',
     'angulartics.google.analytics',
     'ngSanitize',
+    'angularMoment',
 
     // Cross module dependencies
     'app.defaultLang',

@@ -1,0 +1,69 @@
+/**
+ * FONTS CUSTOM STYLES
+ */
+
+body {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-primary {
+  color: $brand-primary !important;
+  fill: $brand-primary !important;
+}
+
+.text-danger {
+  color: $brand-danger !important;
+  fill: $brand-danger !important;
+}
+
+.text-default {
+  color: $text-color !important;
+  fill: $text-color !important;
+}
+
+.text-inverse {
+  color: $white-color !important;
+  fill: $white-color !important;
+}
+
+.text-transparent {
+  color: $black-color !important;
+  fill: $black-color !important;
+  opacity: 0.5 !important;
+}
+
+.text-gray-base {
+  color: $gray-base;
+  fill: $gray-base;
+}
+
+.text-gray-darker {
+  color: $gray-darker;
+  fill: $gray-darker;
+}
+
+.text-gray-dark {
+  color: $gray-dark;
+  fill: $gray-dark;
+}
+
+.text-gray {
+  color: $gray;
+  fill: $gray;
+}
+
+.text-gray-light {
+  color: $gray-light;
+  fill: $gray-light;
+}
+
+.text-gray-lighter {
+  color: $gray-lighter;
+  fill: $gray-lighter;
+}

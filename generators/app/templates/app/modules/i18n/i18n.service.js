@@ -9,7 +9,7 @@
   angular.module('app').factory('i18n', i18n);
 
   /* @ngInject */
-  function i18n($rootScope, $localStorage, $translate, defaultLang, usersService) {
+  function i18n($rootScope, $localStorage, $translate, defaultLang, usersService, moment) {
 
     var services = {
       setLang: setLang,
@@ -26,6 +26,7 @@
       lang = lang.split('-')[0];
       $localStorage.lang = lang;
       $translate.use(lang);
+      moment.locale(lang);
       $rootScope.$broadcast('lang:change', lang);
     }
 
@@ -58,9 +59,10 @@
       } else {
         return usersService.isLogged().then(function(user) {
           user.properties = user.properties || {};
+
           user.properties.lang = user.properties.lang || '';
-          
           user.properties.lang = user.properties.lang.split('-')[0];
+
           return user.properties.lang ? user.properties.lang : lang;
         }).catch(function() {
           return lang;
