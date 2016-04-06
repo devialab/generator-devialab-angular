@@ -20,7 +20,7 @@
 
 ```
 gem install compass
-npm install -g bower protractor
+npm install -g bower grunt-cli protractor
 npm install
 webdriver-manager update
 ```
