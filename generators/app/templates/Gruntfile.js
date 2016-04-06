@@ -570,7 +570,8 @@ module.exports = function(grunt) {
       options: {
         skip: ['angular', 'angular-mocks', 'angular-sanitize'],
         hideUpToDate: true
-      }
+      },
+      run: {}
     },
 
     release: {

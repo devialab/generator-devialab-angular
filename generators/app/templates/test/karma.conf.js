@@ -22,6 +22,8 @@ module.exports = function(config) {
       // http://stackoverflow.com/questions/29391111/karma-phantomjs-and-es6-promises
       // http://stackoverflow.com/questions/24224323/bind-polyfill-for-phantomjs
       'bower_components/bind-polyfill/index.js',
+      // https://github.com/taylorhakes/promise-polyfill/pull/21
+      'bower_components/promise-polyfill/promise.js',
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',

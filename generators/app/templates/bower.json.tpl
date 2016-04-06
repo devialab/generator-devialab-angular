@@ -14,7 +14,7 @@
   "private": true,
   "dependencies": {
     "angular": "1.5.3",
-    "angular-bootstrap": "1.2.5",
+    "angular-bootstrap": "1.3.1",
     "angular-bootstrap-slider": "0.1.26",
     "angular-corbel": "0.3.1",
     "angular-loading-bar": "0.9.0",
