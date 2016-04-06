@@ -13,7 +13,7 @@
 
 # Environments
 
-* Integration: http://webapp-int.<%= appName %>.com/
+* Integration: http://<%= appName %>-int.devialab.com/
 
 
 # Installation
