@@ -14,7 +14,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "grunt": "1.0.1",
+    "grunt": "0.4.5",
     "grunt-autoprefixer": "3.0.4",
     "grunt-cli": "1.2.0",
     "grunt-concurrent": "2.2.1",
