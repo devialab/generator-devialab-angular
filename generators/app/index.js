@@ -1,5 +1,6 @@
-var generators = require('yeoman-generator'),
-    glob = require('glob');
+var generators = require('yeoman-generator');
+var glob = require('glob');
+var _ = require('lodash');
 
 module.exports = generators.Base.extend({
 
@@ -7,6 +8,7 @@ module.exports = generators.Base.extend({
 
     init: function() {
       this.params = this.params || {};
+      this.params._ = _;
     }
 
   },
@@ -18,7 +20,7 @@ module.exports = generators.Base.extend({
       this.prompt({
         type: 'input',
         name: 'appName',
-        message: 'Your project name',
+        message: 'Your project name in kebab-case',
         default: this.appname
       }, function(answers) {
         this.params.appName = answers.appName;
@@ -93,13 +95,9 @@ module.exports = generators.Base.extend({
 
   },
 
-  configuring: {
+  configuring: {},
 
-  },
-
-  default: {
-
-  },
+  default: {},
 
   writing: {
 
@@ -107,8 +105,8 @@ module.exports = generators.Base.extend({
      * Write all templates files (*.tpl) using `prompting` params phase
      */
     writeTemplates: function() {
-      glob(this.templatePath('**/*.tpl'), function (er, files) {
-        
+      glob(this.templatePath('**/*.tpl'), function(er, files) {
+
         files.forEach(function(file) {
 
           var src = file.split('app/templates/');
@@ -121,7 +119,7 @@ module.exports = generators.Base.extend({
           );
 
         }.bind(this));
-      
+
       }.bind(this));
 
     },
@@ -151,9 +149,7 @@ module.exports = generators.Base.extend({
 
   },
 
-  conflicts: {
-
-  },
+  conflicts: {},
 
   install: {
 
@@ -167,8 +163,6 @@ module.exports = generators.Base.extend({
 
   },
 
-  end: {
-
-  }
+  end: {}
 
 });

@@ -29,6 +29,8 @@ Run `grunt` for building and `grunt serve` for preview
 Available generators:
 
 * [devialab-angular](#app) (aka [devialab-angular:app](#app))
+* [devialab-angular:module](#module) (aka [devialab-angular:module](#module))
+* [devialab-angular:directive](#directive) (aka [devialab-angular:directive](#directive))
 
 ### App
 Sets up a new AngularJS app, generating all the boilerplate you need to get started. The app generator also optionally installs Bootstrap and additional AngularJS modules, such as angular-translate, angularitics, ...
@@ -36,6 +38,22 @@ Sets up a new AngularJS app, generating all the boilerplate you need to get star
 Example:
 ```bash
 yo devialab-angular
+```
+
+### Module
+Sets up a new AngularJS module, generating all the boilerplate you need to define a new module.
+
+Example:
+```bash
+yo devialab-angular:module
+```
+
+### Directive
+Sets up a new AngularJS directive, generating all the boilerplate you need to define a new element directive.
+
+Example:
+```bash
+yo devialab-angular:directive
 ```
 
 ## Bower Components
@@ -51,6 +69,7 @@ The following packages are always installed by the [app](#app) generator:
 * angular-corbel
 * ngstorage
 * angulartics
+* angular-moment
 
 
 The following additional modules are available as components on bower, and installable via `bower install`:
