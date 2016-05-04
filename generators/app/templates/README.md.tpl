@@ -19,10 +19,30 @@
 # Installation
 
 ```
-gem install compass
+gem install compass scss-lint
 npm install -g bower grunt-cli protractor
 npm install
+bower install
 webdriver-manager update
+```
+
+
+# Build project
+
+```
+grunt build
+```
+
+
+# Set environment config
+
+Build/run project with specific environment config.
+
+Supported values: `int` `prod`
+
+```
+grunt build --env int
+grunt serve --env prod
 ```
 
 
@@ -49,26 +69,6 @@ webdriver-manager update
 	```
 	grunt serve --serverPort 9003 --testPort 1234
 	```
-
-
-# Build project
-
-```
-grunt build
-```
-
-
-# Set environment config
-
-Build/run project with specific environment config.
-
-Supported values: `int` `prod`
-
-```
-grunt build --env int
-grunt serve --env prod
-```
-
 
 # Run tests
 
