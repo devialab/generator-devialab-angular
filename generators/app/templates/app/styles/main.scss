@@ -26,9 +26,9 @@
 @import "./_spinner";
 @import "./_typo";
 @import "./_utilities";
-@import "../modules/account/styles/_account";
-@import "../modules/user-layout/styles/_user-layout";
-@import "../modules/landing/styles/_landing";
-@import "../modules/content/styles/_content";
-@import "../modules/login/styles/_login";
-@import "../modules/ui/styles/_ui";
+@import "./modules/account/_account";
+@import "./modules/user-layout/_user-layout";
+@import "./modules/landing/_landing";
+@import "./modules/content/_content";
+@import "./modules/login/_login";
+@import "./modules/ui/_ui";

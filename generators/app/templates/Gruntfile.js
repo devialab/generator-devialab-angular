@@ -317,6 +317,20 @@ module.exports = function(grunt) {
       }
     },
 
+    ngtemplates: {
+      app: {
+        cwd: 'dist',
+        src: 'modules/**/*.html',
+        dest: '.tmp/app.templates.js',
+        options: {
+          prefix: '/',
+          bootstrap: function(module, script) {
+            return '(function() { angular.module(\'' + module + '\').run([\'$templateCache\', function($templateCache) {' + script + '}]);\n})();';
+          }
+        }
+      }
+    },
+
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -370,15 +384,13 @@ module.exports = function(grunt) {
     //     }
     //   }
     // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= appConfig.dist %>/scripts/scripts.js': [
-    //         '<%= appConfig.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
+    uglify: {
+      templates: {
+        files: {
+          '.tmp/app.templates.js': ['.tmp/app.templates.js']
+        }
+      }
+    },
     concat: {
       // Only one 'use strict'
       useStrict: {
@@ -464,6 +476,7 @@ module.exports = function(grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
+            '.htpasswd',
             '*.html',
             'statics/{,*/}*.html',
             '!statics/{,*/}*.mock.html',
@@ -662,7 +675,11 @@ module.exports = function(grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'ngtemplates',
+    'uglify:templates',
+    'generate:concat:templates',
+    'concat:templates'
   ]);
 
   grunt.registerTask('default', [
@@ -670,6 +687,15 @@ module.exports = function(grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('generate:concat:templates', function() {
+    console.log('filerev', grunt.filerev.summary["dist/scripts/scripts.js"]);
+
+    grunt.config(['concat', 'templates'], {
+      src: ['dist/scripts/scripts.*', '.tmp/app.templates.js'],
+      dest: grunt.filerev.summary['dist/scripts/scripts.js']
+    });
+  });
 
   grunt.registerTask('locales', 'webtranslateit task alias', ['webtranslateit']);
 

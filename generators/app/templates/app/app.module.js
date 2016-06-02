@@ -25,12 +25,17 @@
   ]).config(configure).run(init);
 
   /* @ngInject */
-  function configure($logProvider, corbelDriverProvider, configProvider) {
+  function configure($logProvider, $compileProvider, corbelDriverProvider, configProvider) {
 
     /**
      * LOG DEBUG
      */
     $logProvider.debugEnabled(configProvider.get('debug'));
+
+    /**
+     * SCOPE DEBUGGER
+     */
+    $compileProvider.debugInfoEnabled(!configProvider.get('isProduction'));
 
     /**
      * ANGULAR-CORBEL

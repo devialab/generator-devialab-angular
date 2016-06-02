@@ -10,7 +10,7 @@
   /* @ngInject */
   function appConfig($stateProvider, $urlRouterProvider, CONFIG) {
 
-    var base = 'modules/';
+    var base = '/modules/';
 
     // @todo: controllerAs issue: https://github.com/driftyco/ionic/issues/3058
     $stateProvider.state('login', {

@@ -15,6 +15,7 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.5",
+    "grunt-angular-templates": "^1.0.4",
     "grunt-autoprefixer": "3.0.4",
     "grunt-cli": "1.2.0",
     "grunt-concurrent": "2.2.1",

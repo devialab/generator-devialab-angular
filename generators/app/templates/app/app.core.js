@@ -16,8 +16,8 @@
     'angularMoment',
 
     // Cross module dependencies
-    'app.defaultLang',
-    'app.config'
+    'app.config',
+    'app.defaultLang'
   ]);
 
 })();
