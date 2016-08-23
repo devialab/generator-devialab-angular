@@ -13,6 +13,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "jquery": "2.x.x",
     "angular": "1.5.6",
     "angular-bootstrap": "1.3.3",
     "angular-bootstrap-slider": "0.1.28",
